@@ -16,7 +16,7 @@ msg2.textContent=''
 fetch('/weather?address='+addr).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
-            msg2.textContent=data.error
+            msg1.textContent=data.error
         }
         else{
             msg1.textContent=data.location

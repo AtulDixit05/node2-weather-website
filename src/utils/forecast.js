@@ -8,7 +8,8 @@ const forecast=(address,callback)=>{
        }else if(!body.current){
            callback('Select the location Properly',undefined)
        }else{
-           callback(undefined,body.current.weather_descriptions+"\nIt is currently "+body.current.temperature+" degree out.It feels like "+body.current.feelslike+" degree out")
+           callback(undefined,body.current.weather_descriptions+".It is currently "+body.current.temperature+" degree out but it feels like "+body.current.feelslike+" degree out. Humidity in weather is "+body.current.humidity+"%")
+        
        }
     } )
  }
