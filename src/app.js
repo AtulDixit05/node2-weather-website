@@ -4,7 +4,7 @@ const express=require('express')
 const hbs=require('hbs')
 const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
-
+const port=process.env.PORT || 3000
 const app=express()
 //setting up paths
 const publicDirectoryPath=path.join(__dirname,'../public')
@@ -103,6 +103,6 @@ app.get('/weather',(req,res)=>{
 //     res.send('bittle')
 // })
 
-app.listen(3000,()=>{
-    console.log("server upon 3000 port number")
+app.listen(port,()=>{
+    console.log("server upon port number"+port)
 })
